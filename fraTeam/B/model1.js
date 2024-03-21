@@ -14,8 +14,9 @@ const model = {
             {
                 id: 1,
                 eventName: "Felles klatring",
-                eventDate: { year: 2024, month: 4, day: 2 },
-                eventTime: { hour: 12, minutes: 0 },
+                dateTime: '2024-04-02 12:00',
+                // eventDate: { year: 2024, month: 4, day: 2 },
+                // eventTime: { hour: 12, minutes: 0 },
                 isPrivate: false,
             },
             {
@@ -28,6 +29,15 @@ const model = {
         ],
         registrations: [
             { userId: 'lise', activityId: 1 },
+            { userId: 'lise', activityId: 2 },
+        ],
+        hobbies: [
+            {id: 1, name: "Hike", category: 2},
+            {id: 2, name: "Klatring", category: 2},
+            {id: 3, name: "Sjakk", category: 3},
+        ],
+        userHobbies: [
+            {userId: 'lise', hobbyId: 1},
         ],
         users: [
             {
@@ -35,14 +45,12 @@ const model = {
                 profilePicture: "lise's png",
                 name: "Lise Åstad",
                 location: "Oslo",
-                hobby: ["Hike", "Klatring", "Ski"],
             },
             {
                 userId: 'per',
                 profilePicture: "per's png",
                 name: "Per Åstad",
                 location: "Oslo",
-                hobby: ["Hike", "Klatring", "Ski"],
             },
         ],
         sharedActivities: [/* controller henter info fra bruker og profil som blir sett på, sammenligner og sender hit */],

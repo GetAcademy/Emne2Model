@@ -3,6 +3,7 @@ let model = {
         currentView: null,
         darkMode: true,
         language: 'Norsk',
+        loggedInUser: 0,
     },
     input: {
         login: {
@@ -36,6 +37,7 @@ let model = {
     },
     data: {
         tags: ['Gåtur', 'Bowling', 'Andejakt', 'se på Fotballkamp'],
+        participations: [],
         events: [
             {
                 id: 0,
@@ -48,6 +50,10 @@ let model = {
                 tags: [0],
                 location: 'Skogen langt uti hutiheita'
             }
+        ],
+        friendships: [
+            { userId1: 0, userId2: 1, createdDate: '2024-03-21' },
+            { userId1: 0, userId2: 2 },
         ],
         users: [{
             id: 0,
