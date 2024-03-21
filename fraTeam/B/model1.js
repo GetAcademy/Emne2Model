@@ -2,34 +2,51 @@ const model = {
     app: {
         isDarkMode: false,
         currentPage: 'myProfilePage', //eller 'activityInfo'
+        loggedInUserId: 'lise',
     },
     inputs: {
-        search: null,
+        search: {
+            text: null,
+        },
     },
     data: {
-        myProfile: {
-            profilePicture: "lise's png",
-            name: "Lise Åstad",
-            location: "Oslo",
-            hobby: ["Hike", "Klatring", "Ski"],
-            upcomingAct: [
-                {
-                    eventName: "Felles klatring",
-                    eventDate: { year: 2024, month: 4, day: 2 },
-                    eventTime: { hour: 12, minutes: 0 },
-                    isPrivate: false,
-                },
-                {
-                    eventName: "Tur i marka",
-                    eventDate: { year: 2024, month: 3, day: 20 },
-                    eventTime: { hour: 14, minutes: 0 },
-                    isPrivate: true,
-                },
-            ],
-        },
+        acitivites: [
+            {
+                id: 1,
+                eventName: "Felles klatring",
+                eventDate: { year: 2024, month: 4, day: 2 },
+                eventTime: { hour: 12, minutes: 0 },
+                isPrivate: false,
+            },
+            {
+                id: 2,
+                eventName: "Tur i marka",
+                eventDate: { year: 2024, month: 3, day: 20 },
+                eventTime: { hour: 14, minutes: 0 },
+                isPrivate: true,
+            },
+        ],
+        registrations: [
+            { userId: 'lise', activityId: 1 },
+        ],
+        users: [
+            {
+                userId: 'lise',
+                profilePicture: "lise's png",
+                name: "Lise Åstad",
+                location: "Oslo",
+                hobby: ["Hike", "Klatring", "Ski"],
+            },
+            {
+                userId: 'per',
+                profilePicture: "per's png",
+                name: "Per Åstad",
+                location: "Oslo",
+                hobby: ["Hike", "Klatring", "Ski"],
+            },
+        ],
         sharedActivities: [/* controller henter info fra bruker og profil som blir sett på, sammenligner og sender hit */],
     }
-
 }
 
 
